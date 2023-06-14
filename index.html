@@ -17,36 +17,52 @@
 </head>
 <body>
   <section>
-    <h1>Age Calculator</h1>
+    <h1 class="age">AGE CALCULATOR</h1>
+
     <div class="main">
-      <label for="date">
-        <input type="number" class="day" placeholder="DD">
+      
+      <div class="sect">
+        <label for="date">
+        <h5 class="note">DAY</h5>
+        <input type="text" class="day input" placeholder="DD">
       </label>
+      </div>
       <label for="month">
-        <input type="number" class="month" placeholder="MM">
+        <h5 class="note">MONTH</h5>
+        <input type="text" class="month input" placeholder="MM">
       </label>
       <label for="year">
-        <input type="number" class="year" placeholder="YYYY">
+        <h5 class="note">YEAR</h5>
+        <input type="text" class="year input" placeholder="YYYY">
       </label>
-
+    </div>
+    
+    <div class="btnn">
+      <div class="line"></div>
       <button class="submit" type="submit">Check age</button>
     </div>
 
     <div class="show-result">
       <h2 class="display-result">
-        <span class="span-year">--</span>
+        <span class="span-year spanit">--</span>
         years
       </h2>
       <h2 class="display-result">
-        <span class="span-month">--</span>
+        <span class="span-month spanit">--</span>
         Months
       </h2>
       <h2 class="display-result">
-        <span class="span-days">--</span>
+        <span class="span-days spanit">--</span>
         Days
       </h2>
     </div>
-    <p class="error"></p>
+    <div class="cancel">
+      <p class="error"></p>
+      <button class="cancel-btn">cancel</button>
+    </div>
+    <!-- <div>
+      <img src="./design/desktop-design.jpg" alt=".">
+    </div> -->
   </section>
   
   <div class="attribution">

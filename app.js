@@ -6,6 +6,8 @@ const submit  = document.querySelector('.submit');
 const yearage = document.querySelector('.span-year');
 const monthage = document.querySelector('.span-month');
 const daysage = document.querySelector('.span-days');
+const cancel = document.querySelector('.cancel')
+const cancelBtn = document.querySelector('.cancel-btn')
 
 
 
@@ -19,6 +21,7 @@ submit.addEventListener('click', function () {
 
     if (isNaN(dob) || dob > today || month < 0 || month > 11) {
         error.innerHTML = 'invalid date of birth';
+        cancel.classList.add('show-cancel')
         return;
         //clearIt();
     }
@@ -26,6 +29,7 @@ submit.addEventListener('click', function () {
     let isValid = (dob.getFullYear() === year && dob.getMonth() === month && dob.getDate() === days);
     if (!isValid) {
         error.innerHTML = 'invalid date of birth';
+        cancel.classList.add('show-cancel')
         return;
        // clearIt();
     }
@@ -46,3 +50,8 @@ function clearIt() {
     month.value = "";
     days.value = "";
 }
+
+cancelBtn.addEventListener('click', function() {
+    cancel.classList.remove('show-cancel');
+    preventDefault()
+})
